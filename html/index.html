@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>My 3D app</title>
+		<link rel="stylesheet" href="../css/main.css">
+	</head>
+	<body>
+		<div id="SceneCanvas">
+			<canvas id="CScene"></canvas>
+		</div>
+		<div id="Buttons">
+			<div id="WheelsButtons">
+				<div class="button_wheel_white" onclick="WheelsColorToWhite()">Wheels Color White</div>
+				<div class="button_wheel_grey" onclick="WheelsColorToGrey()">Wheels Color Grey</div>
+				<div class="button_wheel_red" onclick="WheelsColorToRed()">Wheels Color Red</div>
+				<div class="button_wheel_blue" onclick="WheelsColorToBlue()">Wheels Color Blue</div>
+				<div class="button_wheel_wood" onclick="WheelsMaterialToWood()">Wheels Material Wood</div>
+				<div class="button_wheel_metal" onclick="WheelsMaterialToMetal()">Wheels Material Metal</div>
+				<div class="button_wheel_aluminium" onclick="WheelsMaterialToNormal()">Wheels Material Normal</div>
+			</div>
+			<div id="LuggageButtons">
+				<div class="button_luggage_white" onclick="LuggageColorToWhite()">Luggage Color White</div>
+				<div class="button_luggage_red" onclick="LuggageColorToRed()">Luggage Color Red</div>
+			</div>
+		</div>
+		<script src="../resources/three.min.js"></script>
+		<script src="../resources/OrbitControls.js"></script>
+		<script src="../resources/TweenMax.min.js"></script>
+		<script src="../resources/OBJLoader.js"></script>
+		<script src="../scripts/main.js"></script>
+	</body>
+</html>
