@@ -58,7 +58,7 @@ var format = '.jpg';
 var urls = [
     path + 'white_bg' + format, path + 'white_bg' + format,
     path + 'white_bg' + format, path + 'white_bg' + format,
-    path + 'Myself' + format, path + 'white_bg' + format
+    path + 'Myself' + format, path + 'Rimowa_logo_mini' + format
 ];
 
 // var urls = [
@@ -68,10 +68,6 @@ var urls = [
 // ];
 
 var reflectionCube = new THREE.CubeTextureLoader().load( urls );
-// var reflectionCube = BoxSceneMaterial;
-
-// scene.background = reflectionCube;
-
 var BoxSceneGeometry = new THREE.BoxGeometry(10, 8, 10);
 
 var BoxSceneMaterial = [
@@ -296,20 +292,20 @@ video.load();
 video.loop = true;
 video.play();
 
-var videotexture2 = new THREE.VideoTexture(video);
-videotexture2.minFilter = THREE.LinearFilter;
-videotexture2.magFilter = THREE.LinearFilter;
-videotexture2.format = THREE.RGBFormat;
+var videotexture = new THREE.VideoTexture(video);
+videotexture.minFilter = THREE.LinearFilter;
+videotexture.magFilter = THREE.LinearFilter;
+videotexture.format = THREE.RGBFormat;
 
-var planeGeometry2 = new THREE.PlaneGeometry();
-var planeTexture2 = new THREE.MeshBasicMaterial({map: videotexture2});
-var TVScreen = new THREE.Mesh(planeGeometry2, planeTexture2);
+var ScreenGeometry = new THREE.PlaneGeometry();
+var ScreenTexture = new THREE.MeshBasicMaterial({map: videotexture});
+var ScreenMesh = new THREE.Mesh(ScreenGeometry, ScreenTexture);
 
-ObjectSetPosition(TVScreen, -4.9, 2, 0);
-ObjectSetRotation(TVScreen, 0, 1.55, 0);
-ObjectSetScale(TVScreen, 4, 4, 4);
+ObjectSetPosition(ScreenMesh, -4.9, 2, 0);
+ObjectSetRotation(ScreenMesh, 0, 1.55, 0);
+ObjectSetScale(ScreenMesh, 4, 4, 4);
 
-scene.add(TVScreen);
+scene.add(ScreenMesh);
 
 /****
 **  BUTTONS

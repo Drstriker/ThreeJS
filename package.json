@@ -1,0 +1,23 @@
+{
+  "name": "threejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Drstriker/ThreeJS_Rimowa.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Drstriker/ThreeJS_Rimowa/issues"
+  },
+  "homepage": "https://github.com/Drstriker/ThreeJS_Rimowa#readme",
+  "dependencies": {
+    "three": "^0.107.0",
+    "typescript": "^3.5.3"
+  }
+}
